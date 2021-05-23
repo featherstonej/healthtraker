@@ -1,0 +1,23 @@
+server:
+  port: 9002
+  ssl:
+    enabled: true
+    key-store-type: PKCS12
+    key-store: classpath:keystore/healthtraker.p12
+    key-store-password: P@ssw0rd
+    key-alias: healthtraker
+spring:
+  datasource:
+     url: "jdbc:postgresql://localhost:5432/healthtrakerdb"
+     username: "thedoc"
+     password: $2gvaeKGFcK&#iyH
+     driver-class-name: "org.postgresql.Driver"
+     initialization-mode: always
+  jpa:
+    properties:
+      temp:
+        use_jdbc_metadata_defaults: false
+    database-platform: "org.hibernate.dialect.PostgreSQLDialect"
+    show-sql: true
+    hibernate:
+      ddl-auto: update
