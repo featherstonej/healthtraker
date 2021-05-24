@@ -8,9 +8,9 @@ server:
     key-alias: healthtraker
 spring:
   datasource:
-     url: "jdbc:postgresql://localhost:5432/healthtrakerdb"
-     username: "thedoc"
-     password: $2gvaeKGFcK&#iyH
+     url: ${JDBC_DATABASE_URL}
+     username: ${JDBC_DATABASE_USERNAME}
+     password: ${JDBC_DATABASE_PASSWORD}
      driver-class-name: "org.postgresql.Driver"
      initialization-mode: always
   jpa:
